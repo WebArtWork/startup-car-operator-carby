@@ -1,0 +1,45 @@
+{
+	"name": "services",
+	"services": [
+		{
+			"id": "/service",
+			"short": "Lorem ipsum.",
+			"thumb": {
+				"src": "",
+				"background": "/template/img/service__img.jpg"
+			},
+			"name": "service"
+		},
+		{
+			"id": "/service",
+			"short": "Lorem ipsum.",
+			"thumb": {
+				"src": "",
+				"background": "/template/img/product-one__img.jpg"
+			},
+			"name": "service"
+		},{
+			"id": "/service",
+			"short": "Lorem ipsum.",
+			"thumb": {
+				"src": "",
+				"background": "/template/img/product-two__img.jpg"
+			},
+			"name": "service"
+		}
+	],
+	"groups": [
+		{
+			"categories": [
+				{
+					"name": "Category Name",
+					"tags": [
+						{
+							"name": "Tag Name"
+						}
+					]
+				}
+			]
+		}
+	]
+}

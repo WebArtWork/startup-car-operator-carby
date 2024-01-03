@@ -1,0 +1,25 @@
+<div class="cars">
+	<div class="container">
+		<h3 class="cars__title">Cars</h3>
+		<div class="cars__items">
+			{% for car in cars %}
+			<div class="cars__item">
+				<div class="cars__top">
+					<img src="{{{car.thumb}}}" alt="{{{car.name}}}" />
+					<div class="title">
+						<span>{{{car.name}}}</span>
+					</div>
+				</div>
+
+				<div class="cars__bottom">
+					<p class="cars__description">{{{car.short}}}</p>
+
+					<a class="cars__link" href="/cars/{{{car.id}}}">
+						{{{translate("Template.detailed")}}}
+					</a>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

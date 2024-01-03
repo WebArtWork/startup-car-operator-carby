@@ -1,0 +1,17 @@
+<div class="service__wrapper">
+	<div class="content">
+		<div class="service__title">
+			<hr class="line" />
+			<h1>{{{translate("Template.Services")}}}</h1>
+		</div>
+		<h1>{{{service.name}}}</h1>
+		<img src="{{{service.thumb}}}" alt="{{{service.name}}}" />
+		{% for thumb in service.thumbs %}
+		<div><img src="{{{thumb}}}" alt="{{{service.name}}}" /></div>
+		{% endfor %}
+		<pre>
+			{{{service.description|safe}}}
+		</pre
+		>
+	</div>
+</div>

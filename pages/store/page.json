@@ -1,0 +1,37 @@
+{
+	"name": "store",
+	"store": [
+		{
+			"id": "/store",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "/template/img/service.png",
+			"name": "store"
+		},
+		{
+			"id": "/store",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "/template/img/service.png",
+			"name": "store"
+		},
+		{
+			"id": "/store",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "/template/img/service.png",
+			"name": "store"
+		}
+	],
+	"groups": [
+		{
+			"categories": [
+				{
+					"name": "Category Name",
+					"tags": [
+						{
+							"name": "Tag Name"
+						}
+					]
+				}
+			]
+		}
+	]
+}

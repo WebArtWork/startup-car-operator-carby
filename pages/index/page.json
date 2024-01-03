@@ -1,0 +1,79 @@
+{
+	"title": "Cool Title",
+	"store": {
+		"telegram": "https://t.me/wawceo"
+	},
+	"products": [
+		{
+			"id": "/product",
+			"price": 1200,
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "/template/img/products.png",
+			"name": "product"
+		},
+		{
+			"id": "/product",
+			"price": 1200,
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "/template/img/products.png",
+			"name": "product"
+		},
+		{
+			"id": "/product",
+			"price": 1200,
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "/template/img/products.png",
+			"name": "product"
+		},
+		{
+			"id": "/product",
+			"price": 1200,
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "/template/img/products.png",
+			"name": "product"
+		}
+	],
+	"services": [
+		{
+			"id": "/service",
+			"price": 1200,
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://car.webart.work/template/img/hero-img.webp",
+			"name": "service"
+		},
+		{
+			"id": "/service",
+			"price": 1200,
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://car.webart.work/template/img/hero-img.webp",
+			"name": "service"
+		},
+		{
+			"id": "/service",
+			"price": 1200,
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://car.webart.work/template/img/hero-img.webp",
+			"name": "service"
+		}
+	],
+	"articles": [
+		{
+			"id": "/article",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://car.webart.work/template/img/hero-img.webp",
+			"name": "article"
+		},
+		{
+			"id": "/article",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://car.webart.work/template/img/hero-img.webp",
+			"name": "article"
+		},
+		{
+			"id": "/article",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://car.webart.work/template/img/hero-img.webp",
+			"name": "article"
+		}
+	]
+}

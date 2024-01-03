@@ -1,0 +1,40 @@
+{
+	"name": "cars",
+	"cars": [
+		{
+			"id": "/car",
+			"price": 1200,
+			"short": "With us, your trip will be comfortable and cozy. You can enjoy the peace and scenery, and we will take care of all the worries..",
+        	"thumb": "/template/img/products.png",
+			"name": "product"
+		},
+		{
+			"id": "/car",
+			"price": 1200,
+			"short": "With us, your trip will be comfortable and cozy. You can enjoy the peace and scenery, and we will take care of all the worries..",
+        	"thumb": "/template/img/products.png",
+			"name": "product"
+		},
+		{
+			"id": "/car",
+			"price": 1200,
+			"short": "With us, your trip will be comfortable and cozy. You can enjoy the peace and scenery, and we will take care of all the worries..",
+        	"thumb": "/template/img/products.png",
+			"name": "product"
+		}
+	],
+	"groups": [
+		{
+			"categories": [
+				{
+					"name": "Category Name",
+					"tags": [
+						{
+							"name": "Tag Name"
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,87 @@
+<script type="module">
+	import Service from '/api/wjst/service';
+	import Dom from '/api/wjst/dom';
+	Service.perPage = 10;
+	let page = 1;
+
+	if ((await Service.page(1)).length < Service.perPage) {
+		Dom.remove('loadServices');
+	}
+
+	document.getElementById('loadServices').addEventListener('click', async () => {
+		page++;
+		const services = await Service.page(page);
+
+		if (services.length < Service.perPage) {
+			Dom.remove('loadServices');
+		}
+		for (const service of services) {
+			if (!service.thumbs) {
+				service.thumbs = [];
+			}
+			Dom.add('services', Dom.template('service', {
+				thumb: service.thumb,
+				thumbs: service.thumbs.map(thumb => {
+					return Dom.template('service_thumb', {
+						name: service.name,
+						thumb
+					})
+				}),
+				name: service.name,
+				_id: service._id,
+				short: service.short,
+				description: service.description
+			}));
+		}
+	});
+</script>
+
+
+<div class="container">
+	<div class="services">
+		<div class="services__left">
+			<h3 class="services__title">
+				{{{translate("Template.POPULAR")}}} <br />
+				{{{translate("Template.SERVICES")}}}
+			</h3>
+
+			<p>
+				{{{translate("Template.These are just a few of the many popular services")}}}
+			</p>
+		</div>
+
+		<div class="services__items" id="services">
+			{% for service in services %}
+			<section
+				class="services__item"
+				style="background-image: url('{{{service.thumb.background}}}');"
+			>
+				<div>
+					<span class="services__name">{{{service.name}}}</span>
+					<p class="services__description">{{{service.short}}}</p>
+				</div>
+
+				<a class="services__link" href="/service/{{{service.url || service.id}}}">
+					{{{translate("Template.detailed")}}}
+				</a>
+			</section>
+			{% endfor %}
+		</div>
+	</div>
+	<button class="load-more" id="loadServices" style="background-color: rgb(254, 219, 13); padding:10px; border-radius: 10px; color:black; font-weight: 600; margin: 0 auto; display: block; border-color: rgb(254, 219, 13);">Load more</button>
+</div>
+<div id="template-service" style="display: none;"> 
+	<section
+	class="services__item"
+	style="background-image: url('{{{service.thumb.background}}}');"
+>
+	<div>
+		<span class="services__name">{name}</span>
+		<p class="services__description">{short}</p>
+	</div>
+
+	<a class="services__link" href="/service/{_id}">
+		{{{translate("Template.detailed")}}}
+	</a>
+</section>
+</div>

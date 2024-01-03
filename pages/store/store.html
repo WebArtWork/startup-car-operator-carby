@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="store">
+		<div class="store__left">
+			<h3 class="store__title">{{{translate("Template.STORE")}}}</h3>
+
+			<p></p>
+		</div>
+
+		<div class="store__items">
+			{% for store in stores %}
+			<section class="store__item">
+				<img src="{{{store.thumb}}}" alt="{{{store.name}}}" />
+				<span>{{{store.name}}}</span>
+				<p class="store__description">{{{store.short}}}</p>
+
+				<a class="store__link" href="/store/{{{store.id}}}">
+					detailed
+				</a>
+			</section>
+			{% endfor %}
+		</div>
+	</div>
+</div>

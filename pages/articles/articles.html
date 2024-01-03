@@ -1,0 +1,83 @@
+<script type="module">
+	import Article from '/api/wjst/article';
+	import Dom from '/api/wjst/dom';
+	Article.perPage = 10;
+	let page = 1;
+
+	if ((await Article.page(1)).length < Article.perPage) {
+		Dom.remove('loadArticles');
+	}
+
+	document.getElementById('loadArticles').addEventListener('click', async () => {
+		page++;
+		const articles = await Article.page(page);
+
+		if (articles.length < Article.perPage) {
+			Dom.remove('loadArticles');
+		}
+		for (const article of articles) {
+			if (!article.thumbs) {
+				article.thumbs = [];
+			}
+			Dom.add('articles', Dom.template('article', {
+				thumb: article.thumb,
+				thumbs: article.thumbs.map(thumb => {
+					return Dom.template('article_thumb', {
+						name: article.name,
+						thumb
+					})
+				}),
+				name: article.name,
+				_id: article._id,
+				short: article.short,
+				description: article.description
+			}));
+		}
+	});
+</script>
+
+<section class="cars">
+	<div class="container">
+		<h3 class="cars__title">{{{translate("Template.ARTICLES")}}}</h3>
+		<div class="cars__items" id="articles">
+			{% for article in articles %}
+			<div class="cars__item">
+				<div class="cars__top">
+					<img src="{{{article.thumb}}}" alt="{{{article.name}}}" />
+					<div class="title">
+						<span>{{{article.name}}}</span>
+					</div>
+				</div>
+
+				<div class="cars__bottom">
+					<p class="cars__description">{{{article.short}}}</p>
+
+					<a class="cars__link" href="/cars/{{{article.url || article.id}}}">
+						{{{translate("Template.detailed")}}}
+					</a>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<button class="load-more" id="loadArticles" style="background-color: rgb(254, 219, 13); padding: 20px; border-radius: 10px; color:black; font-weight: 600; margin: 0 auto; display: block; border-color: rgb(254, 219, 13);">Load more</button>
+	</div>
+</section>
+
+<div id="template-article" style="display: none;"> 
+	<div class="cars__item">
+		<div class="cars__top">
+			<img src="{thumb}" alt="{name}" />
+			<div class="title">
+				<span>{name}</span>
+			</div>
+		</div>
+
+		<div class="cars__bottom">
+			<p class="cars__description">{short}</p>
+
+			<a class="cars__link" href="/car/{_id}">
+				{{{translate("Template.detailed")}}}
+			</a>
+		</div>
+	</div>
+</div>
