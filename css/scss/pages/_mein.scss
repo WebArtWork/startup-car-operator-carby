@@ -707,22 +707,32 @@
 
 .meeting {
 	text-align: center;
+	background: linear-gradient(180deg, rgb(255, 255, 0) 0%, rgb(69, 83, 87) 100%);
 	padding: 40px;
-	color: #383838;
+	color: #000000;
 	border-radius: 20px;
+	margin-top: 20px;
 
 	& input {
 		border-radius: 20px;
+		background-color: rgb(228,228,228, 0.5);
+		padding: 5px;
+		padding-left: 10px;
+		width: 35%;
 	}
 
 	& textarea {
 		border-radius: 20px;
+		background-color: rgb(228,228,228, 0.5);
+		padding: 5px;
+		padding-left: 10px;
 	}
 }
 
 .meeting button {
-	padding: 8px;
-	color: #060CAA;
+	padding: 10px;
+	color: rgb(69, 83, 87);
+	background-color: rgb(255, 255, 0);
 	font-weight: 400;
 	border-radius: 20px;
 }
@@ -730,7 +740,8 @@
 .order-manager {
 	display: flex;
 	margin: 10px auto;
-	background-color: #e4e4e4;
+	// background-color: #e4e4e4;
+	background: linear-gradient(180deg, rgb(255, 255, 0) 0%, rgb(69, 83, 87) 100%);
 	padding: 20px;
 	border-radius: 8px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -744,6 +755,11 @@
 .order_agent {
 	border-bottom: 1px solid #f1f1f1;
 	padding: 10px 0;
+	color: white;
+
+	& a{
+		color: rgb(228,228,228);
+	}
 }
 
 .order h3 {
@@ -772,7 +788,7 @@
 .slide {
 	flex: 0 0 400px;
 	height: 320px;
-	background-color: #f7f7f7;
+	background: linear-gradient(180deg, rgb(255, 255, 0) 0%, rgb(69, 83, 87) 100%);
 	border: 1px solid #ddd;
 	margin-right: 10px;
 }
@@ -787,7 +803,9 @@
 .slide button{
 	display: block;
 	margin: 0 auto;
-	border-radius: 10px;
-	padding: 8px;
+	border-radius: 20px;
+	padding: 10px;
+	color: rgb(69, 83, 87);
+	background-color: rgb(255, 255, 0);
 	
 }
